@@ -30,3 +30,8 @@ ff02::2		ip6-allrouters
 192.168.4.40	vedett
 192.168.4.41	duvel
 ````
+
+
+## TP-Link extender
+
+When rebooting the TP-link extender, use the ad-hoc wifi and open the page on [http://192.168.0.254](http://192.168.0.254)
