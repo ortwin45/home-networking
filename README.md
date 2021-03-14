@@ -35,3 +35,17 @@ ff02::2		ip6-allrouters
 ## TP-Link extender
 
 When rebooting the TP-link extender, use the ad-hoc wifi and open the page on [http://192.168.0.254](http://192.168.0.254)
+
+
+## Home network architecture
+
+````
+Internet <-> Proximus router ))) Wifi Hopperhok ((( TP-link Wifi Extender ))) Wifi Hopperhok_EXT ((( RPI 3 Bridge <-> Ethernet <-> Ethernet Switch <-> Devices
+
+<-----------------------------------------  192.168.1.0/24  --------------------------------------->              <-----------  192.168.128.64/26  ---------->
+````
+
+### RPI 3 Bridge
+
+Follow the instructions [here](https://www.maketecheasier.com/turn-raspberry-pi-into-wi-fi-bridge).
+
