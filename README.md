@@ -19,3 +19,14 @@ dhcp-host=66:d5:95:a9:de:38,192.168.4.32 # RPI
 dhcp-host=66:d5:95:de:e5:43,192.168.4.9 # Dell XPS Ubuntu
 ...
 ````
+
+Another way is to map based on the hostname using the ``/etc/hosts`` file. 
+````
+127.0.0.1	localhost
+::1		localhost ip6-localhost ip6-loopback
+ff02::1		ip6-allnodes
+ff02::2		ip6-allrouters
+192.168.4.32	mobilityplus
+192.168.4.40	vedett
+192.168.4.41	duvel
+````
