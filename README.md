@@ -13,22 +13,21 @@ The hostname is stored under ``/etc/hostname``. It shouldn't include the domain 
 
 In your access point, you can let DHCP assign the same IPs based on the MAC of your NIC or on the hostname. This is stored in the file ``/etc/dnsmasq.conf``. 
 
-````shell
-...
-dhcp-host=66:d5:95:a9:de:38,192.168.4.32 # RPI
-dhcp-host=66:d5:95:de:e5:43,192.168.4.9 # Dell XPS Ubuntu
-...
 ````
-
-Another way is to map based on the hostname using the ``/etc/hosts`` file. 
-````
-127.0.0.1	localhost
-::1		localhost ip6-localhost ip6-loopback
-ff02::1		ip6-allnodes
-ff02::2		ip6-allrouters
-192.168.4.32	mobilityplus
-192.168.4.40	vedett
-192.168.4.41	duvel
+interface=eth0
+listen-address=192.168.128.1
+bind-interfaces
+server=8.8.8.8
+server=8.8.4.4
+domain-needed
+bogus-priv
+expand-hosts
+domain=local.ojothepojo.be
+dhcp-range=192.168.128.4,192.168.128.254,12h
+dhcp-lease-max=25
+dhcp-host=mobilityplus,192.168.128.100
+dhcp-host=G5,192.168.128.50
+dhcp-host=OJO-DELL,192.168.128.51
 ````
 
 
@@ -42,10 +41,15 @@ When rebooting the TP-link extender, use the ad-hoc wifi and open the page on [h
 ````
 Internet <-> Proximus router ))) Wifi Hopperhok ((( TP-link Wifi Extender ))) Wifi Hopperhok_EXT ((( RPI 3 Bridge <-> Ethernet <-> Ethernet Switch <-> Devices
 
-<-----------------------------------------  192.168.1.0/24  --------------------------------------->              <-----------  192.168.128.64/26  ---------->
+<-----------------------------------------  192.168.1.0/24  --------------------------------------->              <-----------  192.168.128.4/24  ---------->
 ````
 
 ### RPI 3 Bridge
 
 Follow the instructions [here](https://www.maketecheasier.com/turn-raspberry-pi-into-wi-fi-bridge).
 
+### Disable wifi on the RPI
+When the ethernet cable is connected, no need for wifi anymore. 
+````
+sudo ifconfig wlan0 down
+````
