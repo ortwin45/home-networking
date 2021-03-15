@@ -39,9 +39,9 @@ When rebooting the TP-link extender, use the ad-hoc wifi and open the page on [h
 ## Home network architecture
 
 ````
-Internet <-> Proximus router ))) Wifi Hopperhok ((( TP-link Wifi Extender ))) Wifi Hopperhok_EXT ((( RPI 3 Bridge <-> Ethernet <-> Ethernet Switch <-> Devices
+Internet <-> Proximus router ))  (( TP-link Wifi Extender )))  ((( RPI 3 Bridge <-> Ethernet <-> Ethernet Switch <-> Devices
 
-<-----------------------------------------  192.168.1.0/24  --------------------------------------->              <-----------  192.168.128.4/24  ---------->
+<--------------------  192.168.1.0/24  -------------------------->              <-----------  192.168.128.4/24  ----------->
 ````
 
 ### RPI 3 Bridge
