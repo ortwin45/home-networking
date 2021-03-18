@@ -53,3 +53,17 @@ When the ethernet cable is connected, no need for wifi anymore.
 ````
 sudo ifconfig wlan0 down
 ````
+
+## SD Cards
+
+
+| Card Number   | OS                       | Hardware     | Size   | Hostname     | ip              |Remarks       |
+| ------------- | ------------------------ | ------------ | ------ | ------------ | --------------- |              |
+| 1             | Retropie                 | Rpi 4B       | 64 GB  | ?            |                 |              |
+| 2             | Ubuntu 20.04 Server      | Rpi 4B       | 64 GB  | duvel        | 192.168.128.110 |              |
+| 3             | Ubuntu 20.04 Server      | Rpi 4B       | 64 GB  | vedett       | 192.168.128.111 |              |
+| x             | Raspberry Pi OS (32 bit) | Rpi 3B       | ?  GB  | mobilityplus | 192.168.128.100 |              |
+| x             | Raspberry Pi OS (32 bit) | Rpi 3B       | ?  GB  | ap           | 192.168.128.1   | Access point |
+
+
+
