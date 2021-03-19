@@ -76,3 +76,12 @@ hdmi_force_hotplug=1
 hdmi_drive=2
 ````
 This might also work on Ubuntu, though you have to create the file yourself. 
+
+### Ubuntu server
+
+As explained on [this website](https://vitux.com/how-to-manually-mount-unmount-a-usb-device-on-ubuntu/), mounting a USB SSD as non-root user is done with the following command. If you omit the -o, the owner will be root. Assuming the device is detected in ``/dev/sda1``:
+````
+sudo mount /dev/sda1 /media/ubuntu/usbssd/ -o uid=1000
+````
+
+Unmounting is done using ``sudo umount /dev/sda1``
