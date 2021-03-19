@@ -75,3 +75,4 @@ Update the ``/boot/config.txt`` with the following:
 hdmi_force_hotplug=1
 hdmi_drive=2
 ````
+This might also work on Ubuntu, though you have to create the file yourself. 
