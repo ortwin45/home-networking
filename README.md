@@ -62,8 +62,8 @@ sudo ifconfig wlan0 down
 | 1             | Retropie                 | Rpi 4B       | 64 GB  | retropie     | 192.168.128.120 |              |
 | 2             | Ubuntu 20.04 Server      | Rpi 4B       | 64 GB  | duvel        | 192.168.128.110 |              |
 | 3             | Ubuntu 20.04 Server      | Rpi 4B       | 64 GB  | vedett       | 192.168.128.111 |              |
-| x             | Raspberry Pi OS (32 bit) | Rpi 3B       | ?  GB  | mobilityplus | 192.168.128.100 |              |
-| x             | Raspberry Pi OS (32 bit) | Rpi 3B       | ?  GB  | ap           | 192.168.128.1   | Access point |
+| 4             | Raspberry Pi OS (32 bit) | Rpi 3B       |  8 GB  | mobilityplus | 192.168.128.100 |              |
+| 5             | Raspberry Pi OS (32 bit) | Rpi 3B       | 16 GB  | ap           | 192.168.128.1   | Access point |
 
 
 ## RPI tips
@@ -79,9 +79,12 @@ This might also work on Ubuntu, though you have to create the file yourself.
 
 ### Ubuntu server
 
+Ubuntu server needs MBR formatting (not GPT) for the external USB SSD device. 
+
 As explained on [this website](https://vitux.com/how-to-manually-mount-unmount-a-usb-device-on-ubuntu/), mounting a USB SSD as non-root user is done with the following command. If you omit the -o, the owner will be root. Assuming the device is detected in ``/dev/sda1``:
 ````
 sudo mount /dev/sda1 /media/ubuntu/usbssd/ -o uid=1000
 ````
-
 Unmounting is done using ``sudo umount /dev/sda1``
+
+
