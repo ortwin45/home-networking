@@ -87,4 +87,3 @@ sudo mount /dev/sda1 /media/ubuntu/usbssd/ -o uid=1000
 ````
 Unmounting is done using ``sudo umount /dev/sda1``
 
-
