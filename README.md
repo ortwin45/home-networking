@@ -64,6 +64,8 @@ sudo ifconfig wlan0 down
 | 3             | Ubuntu 20.04 Server      | Rpi 4B       | 64 GB  | vedett       | 192.168.128.111 |              |
 | 4             | Raspberry Pi OS (32 bit) | Rpi 3B       |  8 GB  | mobilityplus | 192.168.128.100 |              |
 | 5             | Raspberry Pi OS (32 bit) | Rpi 3B       | 16 GB  | ap           | 192.168.128.1   | Access point |
+| 6             | OpenWRT                  | Rpi 4B       | 64 GB  | openwrt      | 192.168.?????   | Access point |
+
 
 
 ## RPI tips
