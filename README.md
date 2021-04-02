@@ -48,11 +48,17 @@ Internet <-> Proximus router ))  (( TP-link Wifi Extender )))  ((( RPI 3 Bridge 
 
 Follow the instructions [here](https://www.maketecheasier.com/turn-raspberry-pi-into-wi-fi-bridge).
 
+Also, you can add port forwarding to a server on the subnet. For example for Kibana: 
+````shell
+sudo iptables -A PREROUTING -t nat -i wlan0 -p tcp --dport 5601 -j DNAT --to 192.168.128.111:5601
+````
+
 ### Disable wifi on the RPI
 When the ethernet cable is connected, no need for wifi anymore. 
 ````
 sudo ifconfig wlan0 down
 ````
+This only disables it until reboot. 
 
 ## SD Cards
 
@@ -78,14 +84,3 @@ hdmi_force_hotplug=1
 hdmi_drive=2
 ````
 This might also work on Ubuntu, though you have to create the file yourself. 
-
-### Ubuntu server
-
-Ubuntu server needs MBR formatting (not GPT) for the external USB SSD device. 
-
-As explained on [this website](https://vitux.com/how-to-manually-mount-unmount-a-usb-device-on-ubuntu/), mounting a USB SSD as non-root user is done with the following command. If you omit the -o, the owner will be root. Assuming the device is detected in ``/dev/sda1``:
-````
-sudo mount /dev/sda1 /media/ubuntu/usbssd/ -o uid=1000
-````
-Unmounting is done using ``sudo umount /dev/sda1``
-
