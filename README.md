@@ -52,6 +52,11 @@ Also, you can add port forwarding to a server on the subnet. For example for Kib
 ````shell
 sudo iptables -A PREROUTING -t nat -i wlan0 -p tcp --dport 5601 -j DNAT --to 192.168.128.111:5601
 ````
+You can see the complete iptables config using sudo iptables -v -t nat
+````shell
+sudo iptables -t nat -L -n -v
+sudo iptables -L -n -v
+````
 
 ### Disable wifi on the RPI
 When the ethernet cable is connected, no need for wifi anymore. 
