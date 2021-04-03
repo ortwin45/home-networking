@@ -49,3 +49,20 @@ Internet <-> Proximus router ))) Wifi Hopperhok ((( TP-link Wifi Extender ))) Wi
 
 Follow the instructions [here](https://www.maketecheasier.com/turn-raspberry-pi-into-wi-fi-bridge).
 
+The following is appended to ``/etc/dnsmasq.conf``
+````
+interface=eth0
+listen-address=192.168.128.1
+bind-interfaces
+server=8.8.8.8
+server=8.8.4.4
+domain-needed
+bogus-priv
+expand-hosts
+domain=local.ojothepojo.be
+dhcp-range=192.168.128.4,192.168.128.254,12h
+dhcp-lease-max=25
+dhcp-host=mobilityplus,192.168.128.100
+dhcp-host=G5,192.168.128.50
+
+````
