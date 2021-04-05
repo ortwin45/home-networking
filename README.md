@@ -83,6 +83,19 @@ sudo ifconfig wlan0 down
 ````
 This only disables it until reboot. 
 
+### OpenWRT Wireless AP
+
+Setting up OpenWRT as wireless access point in the 192.168.1.* range... Best approach is probably: 
+1) [Get started with internet access](https://www.zahradnik.io/raspberry-pi-as-a-home-router). 
+Goal of this step is to get started and install LuCI using ``opkg install luci`` and Nano. 
+
+2) [Setup the LAN correctly](https://openwrt.org/docs/guide-user/network/wifi/dumbap). 
+
+3) Some settings for the wifi were needed (or not).
+
+In the end, I had a working AP when connected to the ethernet switch and took a [backup off the config](./backup-OpenWrt-2021-04-05.tar.gz). 
+
+
 ## SD Cards
 
 
