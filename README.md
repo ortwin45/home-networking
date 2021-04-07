@@ -58,17 +58,30 @@ sudo ifconfig wlan0 down
 ````
 This only disables it until reboot. 
 
+### OpenWRT Wireless AP
+
+Setting up OpenWRT as wireless access point in the 192.168.1.* range... Best approach is probably: 
+1) [Get started with internet access](https://www.zahradnik.io/raspberry-pi-as-a-home-router). 
+Goal of this step is to get started and install LuCI using ``opkg install luci`` and Nano. 
+
+2) [Setup the LAN correctly](https://openwrt.org/docs/guide-user/network/wifi/dumbap). 
+
+3) Some settings for the wifi were needed (or not).
+
+In the end, I had a working AP when connected to the ethernet switch and took a [backup off the config](./backup-OpenWrt-2021-04-05.tar.gz). 
+
+
 ## SD Cards
 
 
-| Card Number   | OS                       | Hardware     | Size   | Hostname     | ip              |Remarks       |
-| ------------- | ------------------------ | ------------ | ------ | ------------ | --------------- |              |
-| 1             | Retropie                 | Rpi 4B       | 64 GB  | retropie     | 192.168.128.120 |              |
-| 2             | Ubuntu 20.04 Server      | Rpi 4B       | 64 GB  | duvel        | 192.168.128.110 |              |
-| 3             | Ubuntu 20.04 Server      | Rpi 4B       | 64 GB  | vedett       | 192.168.128.111 |              |
-| 4             | Raspberry Pi OS (32 bit) | Rpi 3B       |  8 GB  | mobilityplus | 192.168.128.100 |              |
-| 5             | Raspberry Pi OS (32 bit) | Rpi 3B       | 16 GB  | ap           | 192.168.128.1   | Access point |
-| 6             | OpenWRT                  | Rpi 4B       | 64 GB  | openwrt      | 192.168.?????   | Access point |
+| Card Number   | OS                       | Hardware     | Size   | Hostname     | ip              | Remarks      | User    |
+| ------------- | ------------------------ | ------------ | ------ | ------------ | --------------- | ------------ | ------- |
+| 1             | Retropie                 | Rpi 4B       | 64 GB  | retropie     | 192.168.128.120 |              | pi      |
+| 2             | Ubuntu 20.04 Server      | Rpi 4B       | 64 GB  | duvel        | 192.168.128.110 |              | ubuntu  |
+| 3             | Ubuntu 20.04 Server      | Rpi 4B       | 64 GB  | vedett       | 192.168.128.111 |              | ubuntu  |
+| 4             | Raspberry Pi OS (32 bit) | Rpi 3B       |  8 GB  | mobilityplus | 192.168.128.100 |              | pi      |
+| 5             | Raspberry Pi OS (32 bit) | Rpi 3B       | 16 GB  | ap           | 192.168.128.1   | Access point | pi      |
+| 6             | OpenWRT                  | Rpi 4B       | 64 GB  | openwrt      | 192.168.?????   | Access point | root    |
 
 
 ## RPI tips
